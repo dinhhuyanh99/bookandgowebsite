@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Book'nGo</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" type="text/css" href="css/materialize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/materialize_uow_theme.css"/>
+		<link rel="stylesheet" type="image/png" href="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/favicon_ehiidn.png" sizes="16x16 32x32">
+	</head>
+	<body>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper uow-blue">
+					<a class="brand-logo hide-on-small-and-down" href="index.html">
+						<img type="image/png" src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/mainLogoTransparent_x8lrif.png" alt="book and go logo"/>
+						<img type="image/png" src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/logoHorizontal_teanw0.png" alt="book and go logo horizontal"/>
+					</a>
+					<a data-target="sidenav-menu-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+					<!-- Navbar User Menu for Login/Register and display of User Details later -->
+					<ul class="nav-user-menu right hide-on-small-and-down">
+						<li><a href="#login-modal" class="btn-outlined modal-trigger">Login</a></li>
+						<li><a href="pages/register.html" class="waves-effect waves-light waves-ripple btn uow-green">Register</a></li>
+						<li><a class="dropdown-trigger" data-target="account-settings-dropdown">
+							<div class="user-brief">
+								<img class="avatar" src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/defaultUser_wze9sx.png" alt="User account avatar"/>
+								<span class="user-name">user_name</span>
+							</div>
+						</a></li>
+					</ul>
+					<ul id="account-settings-dropdown" class="dropdown-content">
+						<li class="waves-effect waves-ripple"><a class="black-text" href="pages/userDetails.html"><i class="material-icons">settings</i>Settings</a></li>
+						<li class="waves-effect waves-ripple"><a class="black-text" onclick="logoutHandler();"><i class="material-icons">exit_to_app</i>Logout</a></li>
+					</ul>
+					<!-- Navbar Buttons List for navigating between pages -->
+					<ul class="nav-buttons-list left hide-on-small-and-down">
+						<li><a href="pages/events.html">Events</a></li>
+						<li><a href="pages/manage.html">Manage</a></li>
+						<li><a href="pages/about.html">About</a></li>
+					</ul>
+
+				</div>
+			</nav>
+
+		</div>
+		<!-- Sidenav for small screen and mobile devices -->
+		<ul id="sidenav-menu-mobile" class="sidenav">
+			<li><div class="user-view">
+				<div class="background">
+					<img src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555717383/default_assets/uow_ducks_x0ebhf.png" alt="User account background">
+				</div>
+				<a href="pages/userDetails.html"><img class="circle" src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/defaultUser_wze9sx.png" alt="User account avatar"/></a>
+				<a href="pages/userDetails.html"><span class="white-text name">user_first_name user_lasst_name</span></a>
+				<a href="pages/userDetails.html"><span class="white-text email">user_email</span></a>
+				<a class="account-settings"><span class="white-text">More options<i class="material-icons">expand_more</i></span></a>
+			</div>
+			<ul class="account-settings-list">
+				<li><a href="pages/userDetails.html"><i class="material-icons">settings</i>Account Settings</a></li>
+				<li><a onclick="logoutHandler();" style="cursor: pointer;"><i class="material-icons">exit_to_app</i>Logout</a></li>
+				<li class="divider"></li>
+			</ul></li>
+			<li><a href="#login-modal" class="modal-trigger">Login</a></li>
+			<li><a href="pages/register.html" class="">Register</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="pages/events.html">Events</a></li>
+			<li><a href="pages/manage.html">Manage</a></li>
+			<li><a href="pages/about.html">About</a></li>
+		</ul>
+
+		<div id="login-modal" class="modal login-modal">
+			<div class="modal-content">
+				<h4>Login</h4>
+				<a class="modal-close-button modal-close"><i class="material-icons black-text">close</i></a>
+				<p>Log in with your username </p>
+				<div class="input-field">
+					<i class="material-icons prefix">account_circle</i>
+					<input type="text" id="user_identification_field" name="user_identification"/>
+					<label for="user_identification_field">Username</label>
+				</div>
+				<div class="input-field">
+					<i class="material-icons prefix">lock</i>
+					<input type="password" id="password_field" name="password" />
+					<label for="password_field">Password</label>
+				</div>
+				<span>Haven't got an account yet? <a href="pages/register.html">Register Now!</a></span>
+			</div>
+			<div class="modal-footer">
+				<a class="right waves-effect waves-light waves-ripple btn uow-blue dark" onclick="loginHandler();">Login</a>
+			</div>
+		</div>
+		<div class="main-body">
+			<div class="main-events-display">
+				<div class="carousel carousel-slider center">
+					  <div class="preloader-wrapper big active" id="main-events-display-preload">
+					   <div class="spinner-layer spinner-blue">
+				        <div class="circle-clipper left">
+				          <div class="circle"></div>
+				        </div><div class="gap-patch">
+				          <div class="circle"></div>
+				        </div><div class="circle-clipper right">
+				          <div class="circle"></div>
+				        </div>
+				      </div>
+
+				      <div class="spinner-layer spinner-red">
+				        <div class="circle-clipper left">
+				          <div class="circle"></div>
+				        </div><div class="gap-patch">
+				          <div class="circle"></div>
+				        </div><div class="circle-clipper right">
+				          <div class="circle"></div>
+				        </div>
+				      </div>
+
+				      <div class="spinner-layer spinner-yellow">
+				        <div class="circle-clipper left">
+				          <div class="circle"></div>
+				        </div><div class="gap-patch">
+				          <div class="circle"></div>
+				        </div><div class="circle-clipper right">
+				          <div class="circle"></div>
+				        </div>
+				      </div>
+
+				      <div class="spinner-layer spinner-green">
+				        <div class="circle-clipper left">
+				          <div class="circle"></div>
+				        </div><div class="gap-patch">
+				          <div class="circle"></div>
+				        </div><div class="circle-clipper right">
+				          <div class="circle"></div>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+			</div>
+			<div class="container">
+				
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/materialize.js"></script>
+		<script type="text/javascript" src="js/userActionsHandler.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/materialize_uow_theme.js"></script>
+	</body>
+</html>

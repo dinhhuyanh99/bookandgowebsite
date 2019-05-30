@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>About - Book'nGo</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" type="text/css" href="../css/materialize.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/materialize_uow_theme.css"/>
+		<link rel="stylesheet" type="image/png" href="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/favicon_ehiidn.png" sizes="16x16 32x32">
+	</head>
+	<body>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper uow-blue">
+					<a class="brand-logo hide-on-small-and-down" href="../index.html">
+						<img type="image/png" src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/mainLogoTransparent_x8lrif.png" alt="book and go logo"/>
+						<img type="image/png" src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/logoHorizontal_teanw0.png" alt="book and go logo horizontal"/>
+					</a>
+					<a data-target="sidenav-menu-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+					<!-- Navbar User Menu for Login/Register and display of User Details later -->
+					<ul class="nav-user-menu right hide-on-small-and-down">
+						<li><a href="#login-modal" class="btn-outlined modal-trigger">Login</a></li>
+						<li><a href="register.html" class="waves-effect waves-light waves-ripple btn uow-green">Register</a></li>
+						<li><a class="dropdown-trigger" data-target="account-settings-dropdown">
+							<div class="user-brief">
+								<img class="avatar" src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/defaultUser_wze9sx.png" alt="User account avatar"/>
+								<span class="user-name">user_name</span>
+							</div>
+						</a></li>
+					</ul>
+					<ul id="account-settings-dropdown" class="dropdown-content">
+						<li class="waves-effect waves-ripple"><a class="black-text" href="userDetails.html"><i class="material-icons">settings</i>Settings</a></li>
+						<li class="waves-effect waves-ripple"><a class="black-text" onclick="logoutHandler();"><i class="material-icons">exit_to_app</i>Logout</a></li>
+					</ul>
+					<!-- Navbar Buttons List for navigating between pages -->
+					<ul class="nav-buttons-list left hide-on-small-and-down">
+						<li><a href="events.html">Events</a></li>
+						<li><a href="manage.html">Manage</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+
+				</div>
+			</nav>
+
+		</div>
+		<!-- Sidenav for small screen and mobile devices -->
+		<ul id="sidenav-menu-mobile" class="sidenav">
+			<li><div class="user-view">
+				<div class="background">
+					<img src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555717383/default_assets/uow_ducks_x0ebhf.png" alt="User account background">
+				</div>
+				<a href="userDetails.html"><img class="circle" src="https://res.cloudinary.com/dhuyanh99/image/upload/v1555715298/default_assets/defaultUser_wze9sx.png" alt="User account avatar"/></a>
+				<a href="userDetails.html"><span class="white-text name">user_first_name user_lasst_name</span></a>
+				<a href="userDetails.html"><span class="white-text email">user_email</span></a>
+				<a class="account-settings"><span class="white-text">More options<i class="material-icons">expand_more</i></span></a>
+			</div>
+			<ul class="account-settings-list">
+				<li><a href="userDetails.html"><i class="material-icons">settings</i>Account Settings</a></li>
+				<li><a onclick="logoutHandler();" style="cursor: pointer;"><i class="material-icons">exit_to_app</i>Logout</a></li>
+				<li class="divider"></li>
+			</ul></li>
+			<li><a href="#login-modal" class="modal-trigger">Login</a></li>
+			<li><a href="register.html" class="">Register</a></li>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="events.html">Events</a></li>
+			<li><a href="manage.html">Manage</a></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+
+		<div id="login-modal" class="modal login-modal">
+			<div class="modal-content">
+				<h4>Login</h4>
+				<a class="modal-close-button modal-close"><i class="material-icons black-text">close</i></a>
+				<p>Log in with your username </p>
+				<div class="input-field">
+					<i class="material-icons prefix">account_circle</i>
+					<input type="text" id="user_identification_field" name="user_identification"/>
+					<label for="user_identification_field">Username</label>
+				</div>
+				<div class="input-field">
+					<i class="material-icons prefix">lock</i>
+					<input type="password" id="password_field" name="password" />
+					<label for="password_field">Password</label>
+				</div>
+				<span>Haven't got an account yet? <a href="register.html">Register Now!</a></span>
+			</div>
+			<div class="modal-footer">
+				<a class="right waves-effect waves-light waves-ripple btn uow-blue dark" onclick="loginHandler();">Login</a>
+			</div>
+		</div>
+		<div class="main-body">
+			<div class="splash uow-red darken">
+				<h4>About Us</h4>
+			</div>
+			<div class="row">
+				<div class="col s12 m4 l4 xl3">
+					 <img class="responsive-img" src="https://getstarted.uow.edu.au/content/groups/public/@web/@currentstudents/documents/mm/uow254344.jpg">
+					 <img class="responsive-img" src="https://media.uow.edu.au/content/groups/public/@web/@media/documents/mm/uow229470.jpg ">
+
+					 <img class="responsive-img" src="https://www.aspireevents.com.au/content/groups/public/@web/@unic/documents/mm/uow243926.jpg">
+
+					 <img class="responsive-img" src="https://cdn-az.allevents.in/banners/f366fbae6aae7a8067b0cbf9506aded1-rimg-w720-h479-gmir.jpg">
+					 
+				</div>
+				<div class="col s12 m8 l8 xl9">
+					<span class="left"><h5><b>Who</b></h5>Established in the early months of 2019, Book'N'Go is a new and innovative event booking system. With a small team of only 5 University of Wollongong students, we currently
+					are exclusively contracted to provide a fully fledged system that allows event managers to host events at the Univerisity of Wollongong and the general public to view and purchase tickets for these events.<strong> We strongly believe that our system is more robust and capable than previous event booking systems, if you don't believe us, try it out and we will show you!   
+					</strong> 
+					<br /><br />
+					<h5><b>What</b></h5> At Book'N'Go we don't just provide a platform to host and book events. We provide a quality experience that is yet to be matched. 
+					User experience is highly regarded and we ensure that our interaction is fluent and responsive across <strong>all</strong> devices.
+					<br /> <br /> 
+
+					
+					</span>
+					
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="../js/materialize.js"></script>
+		<script type="text/javascript" src="../js/userActionsHandler.js"></script>
+		<script type="text/javascript" src="../js/materialize_uow_theme.js"></script>
+	</body>
+</html>
